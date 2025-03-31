@@ -3,26 +3,44 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Красивый градиентный фон */
-    min-height: 100vh; /* Чтобы фон растянулся на всю высоту */
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    min-height: 100vh;
 }
 
-/* Заголовок */
+/* Навигация */
 header {
     text-align: center;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+    background-color: rgba(255, 255, 255, 0.1);
     color: #333;
 }
 
-/* Контейнер для центрирования */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e74c3c;
+}
+
+/* Контейнер */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Стили для списка товаров */
+/* Товары */
 .products {
     display: flex;
     flex-wrap: wrap;
@@ -30,19 +48,19 @@ header {
     justify-content: center;
 }
 
-/* Карточка товара */
 .product {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 250px;
     padding: 15px;
     text-align: center;
-    transition: transform 0.3s ease; /* Плавное увеличение при наведении */
+    transition: transform 0.3s ease;
+    animation: fadeIn 0.5s ease-in;
 }
 
 .product:hover {
-    transform: scale(1.05); /* Увеличение при наведении */
+    transform: scale(1.05);
 }
 
 .product img {
@@ -63,9 +81,8 @@ header {
     margin: 10px 0;
 }
 
-/* Кнопка */
-button {
-    background-color: #e74c3c; /* Яркий цвет */
+button.add-to-cart {
+    background-color: #e74c3c;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -75,8 +92,49 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #c0392b; /* Темнее при наведении */
+button.add-to-cart:hover {
+    background-color: #c0392b;
+}
+
+/* Корзина */
+#cart {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    background-color: #fff;
+    margin: 10px auto;
+    padding: 10px;
+    max-width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#cart-empty {
+    color: #7f8c8d;
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #333;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Адаптивность */
