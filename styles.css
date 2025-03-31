@@ -41,6 +41,10 @@ nav a:hover {
 }
 
 /* Товары */
+#products {
+    text-align: center;
+}
+
 .products {
     display: flex;
     flex-wrap: wrap;
@@ -114,10 +118,63 @@ button.add-to-cart:hover {
     max-width: 300px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart-items button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cart-items button:hover {
+    background-color: #c0392b;
 }
 
 #cart-empty {
     color: #7f8c8d;
+}
+
+/* Форма обратной связи */
+#contact {
+    margin-top: 40px;
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+form button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #2980b9;
 }
 
 /* Футер */

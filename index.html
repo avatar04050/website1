@@ -14,12 +14,14 @@
                 <li><a href="#home">Главная</a></li>
                 <li><a href="#products">Товары</a></li>
                 <li><a href="#cart">Корзина</a></li>
+                <li><a href="#contact">Контакты</a></li>
             </ul>
         </nav>
         <h1>Магазин товаров</h1>
     </header>
     <div class="container">
         <section id="products">
+            <h2>Наши товары</h2>
             <div class="products">
                 <div class="product">
                     <img src="product1.jpg" alt="Жопа на продажу 1" loading="lazy">
@@ -40,10 +42,19 @@
             <ul id="cart-items"></ul>
             <p id="cart-empty">Корзина пуста</p>
         </section>
+        <section id="contact">
+            <h2>Обратная связь</h2>
+            <form action="https://formspree.io/f/mdkeljby" method="POST">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Ваш email" required>
+                <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
     </div>
     <footer>
         <p>© 2025 Магазин товаров. Все права защищены.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
